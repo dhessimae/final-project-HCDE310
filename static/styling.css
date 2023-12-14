@@ -1,0 +1,65 @@
+body {
+    background-color: #F2EBE9;
+}
+
+#welcome {
+    font-family: 'Raleway';
+    color: #7C3E66;
+    padding-top: 200px;
+}
+
+#welcome-para {
+    font-family: 'Raleway';
+    font-style: italic;
+    color: #243A73;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 24px;
+
+}
+
+.enter-text {
+    font-family: 'Raleway';
+    color: #243A73;
+    padding-top: 40px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ li {
+     margin-top: 20px;
+     margin-bottom: 20px;
+     display: flex;
+     align-items: center;
+ }
+
+img {
+    margin-right: 10px;
+}
+
+#box {
+    border: 5px solid;
+    border-color: #243A73;
+    width: 700px;
+    height: 300px;
+    background: white;
+    padding: 20px;
+    font-family: 'Raleway';
+    font-size: 16px;
+}
+
+
+.recipe-info {
+    flex-grow: 1;
+}
+
+
+#footer {
+    font-family: 'Raleway';
+    color: black;
+    padding-top: 45px;
+    bottom: 10px;
+}

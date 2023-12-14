@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styling.css') }}" rel="stylesheet">
+</head>
+
+<header class="text-center">
+    <h1 id="welcome">Welcome to Dhessimae's Recipe Search App!</h1>
+    <h2 id="welcome-para">This website will provide you with random recipes with the submitted ingredient as the star. Try it out!</h2>
+</header>
+
+<body class="text-center">
+
+    <form action="/results" method="POST">
+        <p class="enter-text">
+            <label for="query">Enter an ingredient: </label>
+            <input type="text" id="query" name="query" required>
+        </p>
+
+
+        <p class="enter-text">
+            <label for="mealType">Meal Type:</label>
+            <select id="mealType" name="mealType">
+                <option value="breakfast lunch dinner snack">Any</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snack</option>
+
+            </select>
+        </p>
+
+        <p class="enter-text">
+            Dietary Preferences:
+            <p>
+                <input class="form-check-input" type="checkbox" value="balanced" id="balanced" name="preferences[]">
+                <label class="form-check-label" for="balanced">Balanced</label>
+
+                <input class="form-check-input" type="checkbox" value="high-fiber" id="high-fiber" name="preferences[]">
+                <label class="form-check-label" for="high-fiber">High-fiber</label>
+
+                <input class="form-check-input" type="checkbox" value="high-protein" id="high-protein" name="preferences[]">
+                <label class="form-check-label" for="high-protein">High-protein</label>
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" value="low-carb" id="low-carb" name="preferences[]">
+                <label class="form-check-label" for="low-carb">Low-carb</label>
+
+                <input class="form-check-input" type="checkbox" value="low-fat" id="low-fat" name="preferences[]">
+                <label class="form-check-label" for="low-fat">Low fat</label>
+
+                <input class="form-check-input" type="checkbox" value="low-sodium" id="low-sodium" name="preferences[]">
+                <label class="form-check-label" for="low-sodium">Low sodium</label>
+            </p>
+
+        <p class="enter-text">
+            Health Preferences:
+            <p>
+                <input class="form-check-input" type="checkbox" value="vegetarian" id="vegetarian" name="preferences[]">
+                <label class="form-check-label" for="vegetarian">Vegetarian</label>
+
+                <input class="form-check-input" type="checkbox" value="vegan" id="vegan" name="preferences[]">
+                <label class="form-check-label" for="vegan">Vegan</label>
+
+                <input class="form-check-input" type="checkbox" value="soy-free" id="soy-free" name="preferences[]">
+                <label class="form-check-label" for="soy-free">Soy-free</label>
+
+                <input class="form-check-input" type="checkbox" value="dairy-free" id="dairy-free" name="preferences[]">
+                <label class="form-check-label" for="dairy-free">Dairy-free</label>
+
+            </p>
+
+            <p>
+                <input class="form-check-input" type="checkbox" value="egg-free" id="egg-free" name="preferences[]">
+                <label class="form-check-label" for="egg-free">Egg-free</label>
+
+                <input class="form-check-input" type="checkbox" value="fish-free" id="fish-free" name="preferences[]">
+                <label class="form-check-label" for="fish-free">Fish-free</label>
+
+                <input class="form-check-input" type="checkbox" value="gluten-free" id="gluten-free" name="preferences[]">
+                <label class="form-check-label" for="gluten-free">Gluten-free</label>
+
+                <input class="form-check-input" type="checkbox" value="peanut-free" id="peanut-free" name="preferences[]">
+                <label class="form-check-label" for="peanut-free">Peanut-free</label>
+
+            </p>
+
+            <p>
+                <input class="form-check-input" type="checkbox" value="shellfish-free" id="shellfish-free" name="preferences[]">
+                <label class="form-check-label" for="shellfish-free">Shellfish-free</label>
+
+                <input class="form-check-input" type="checkbox" value="low-sugar" id="low-sugar" name="preferences[]">
+                <label class="form-check-label" for="low-sugar">Low sugar</label>
+
+                <input class="form-check-input" type="checkbox" value="low-potassium" id="low-potassium" name="preferences[]">
+                <label class="form-check-label" for="low-potassium">Low potsassium</label>
+
+                <input class="form-check-input" type="checkbox" value="pecatarian" id="pecatarian" name="preferences[]">
+                <label class="form-check-label" for="pecatarian">Pescatarian</label>
+
+            </p>
+         <p class="enter-text">
+            <label for="minCal">Minimum Calories: </label>
+            <input type="number" id="minCal" name="minCal" required>
+        </p>
+
+    <p class="enter-text">
+        <label for="maxCal">Maximum Calories: </label>
+        <input type="number" id="maxCal" name="maxCal" required>
+    </p>
+
+
+
+        <p class="enter-text">
+            <button type="submit" class="btn btn-sm btn-light">Get recipes</button>
+        </p>
+    </form>
+
+</body>
+
+<footer>
+    <div class="text-center">
+        <p id="footer">
+            API and Data Collection from
+            <a href="https://developer.edamam.com/edamam-docs-recipe-api">Edamam</a>
+        </p>
+    </div>
+</footer>
+
+</html>
+
+
+

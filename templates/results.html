@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styling.css') }}" rel="stylesheet">
+
+</head>
+
+<header class="text-center">
+    <h1 id="welcome">Your new recipes!</h1>
+    <h2 id="welcome-para">Recipes between {{ minimum_Calories }} and {{ maximum_Calories }} calories</h2>
+</header>
+
+<body>
+
+    <div class="container d-flex justify-content-center align-items-center">
+    {% if recipes %}
+        <ul>
+            {% for recipe in recipes %}
+                <li>
+                    <img src="{{ recipe.image }}">
+                    <div id="box">
+                        <p>{{ recipe.label }}</p>
+                        <p>Ingredients: </p>
+                        <p>{{ recipe.ingredients|join(', ') }}</p> 
+                        <p>Calories: {{ recipe.calories }}</p>
+                        <p><a href="{{ recipe.url }}">View Recipe</a></p>
+                    </div>
+
+                </li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+        <p class="enter-text">No recipes found.</p>
+    {% endif %}
+
+    </div>
+</body>
+
+<footer>
+    <div class="text-center">
+        <p id="footer">
+            API and Data Collection from
+            <a href="https://developer.edamam.com/edamam-docs-recipe-api">Edamam</a>
+        </p>
+    </div>
+</footer>
+
+</html>
