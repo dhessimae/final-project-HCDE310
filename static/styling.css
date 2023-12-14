@@ -51,10 +51,12 @@ img {
     font-size: 16px;
 }
 
-
-.recipe-info {
-    flex-grow: 1;
+#label-text {
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: bold;
 }
+
 
 
 #footer {
