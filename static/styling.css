@@ -1,16 +1,16 @@
 body {
-    background-color: #F2EBE9;
+    background-color: whitesmoke;
 }
 
 #welcome {
-    font-family: 'Raleway';
-    color: #7C3E66;
+    font-family: monospace;
+    color: orange;
     padding-top: 200px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 #welcome-para {
-    font-family: 'Raleway';
-    font-style: italic;
     color: #243A73;
     padding-top: 10px;
     padding-left: 100px;
@@ -20,9 +20,11 @@ body {
 }
 
 .enter-text {
-    font-family: 'Raleway';
+    font-family: monospace;
     color: #243A73;
     padding-top: 40px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 ul{
@@ -37,7 +39,7 @@ ul{
  }
 
 img {
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 #box {
