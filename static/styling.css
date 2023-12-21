@@ -16,7 +16,6 @@ body {
     padding-left: 100px;
     padding-right: 100px;
     font-size: 24px;
-
 }
 
 .enter-text {
@@ -27,20 +26,21 @@ body {
     font-weight: bold;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
- li {
-     margin-top: 20px;
-     margin-bottom: 20px;
-     display: flex;
-     align-items: center;
- }
+li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
 
 img {
     margin-right: 15px;
 }
+
 
 #box {
     border: 5px solid;
@@ -51,18 +51,41 @@ img {
     padding: 20px;
     font-family: 'Raleway';
     font-size: 16px;
+    overflow: auto;
 }
 
 #label-text {
-    font-family: 'Raleway';
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
+@media only screen and (max-width: 767px) {
+    #welcome {
+        padding-top: 100px;
+    }
 
+    #welcome-para {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #box {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    img {
+        max-width: 75%;
+        margin-right: 0;
+    }
+
+    li {
+        flex-direction: column;
+    }
+}
 
 #footer {
-    font-family: 'Raleway';
     color: black;
     padding-top: 45px;
     bottom: 10px;
